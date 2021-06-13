@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../Css/Header.css" />
+    <link rel="stylesheet" type="text/css" href="../Css/Duvida.css" />
+    <title>Dúvidas?</title>
+</head>
+<body>
+    <header>
+        <div class="logotipo">
+            <img src="../Img/logotipo.png" alt="Logotipo">
+        </div>
+        <div class="nav">
+            <div class="drop-Menu">
+                <button><img src="../Img/menu.png" alt="Menu"></button>
+                <div class="drop-Menu-Show">
+                    <ul>
+                        <li><a href="Index.html">Home</a></li>
+                        <li><a href="Topicos.html">Tópicos</a></li>
+                        <li><a href="Duvidas.html">Dúvidas?</a></li>
+                        <li><a href="Recomendacoes.html">Recomendações</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <form method="POST">
+                <div class="form">
+                    <label>Nome: </label><br />
+                    <input id="Nome" name="Nome" type="text" placeholder="Nome" maxlength="100" required />
+                </div>
+                <div class="form">
+                    <label>E-mail: </label><br />
+                    <input id="Email" name="Email" type="email" placeholder="E-mail" maxlength="100" required />
+                </div>
+                <div class="form">
+                    <label>Assunto: </label><br />
+                    <input id="Assunto" name="Assunto" type="text" placeholder="Assunto" required maxlength="100" />
+                </div>
+                <div class="form">
+                    <label>Dúvida: </label><br />
+                    <textarea id="Duvida" name="Duvida" maxlength="500" required></textarea>
+                </div>
+                <input type="submit" onclick="alerta();" value="Enviar">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>Site desenvolvido por Lauredi Gustavo</p>
+    </footer>
+
+    <script>
+        function alerta(){
+            //Outra validação
+            if (document.getElementById('Nome').value==""){}
+            else if (document.getElementById("Email").value==""){}
+            else if (document.getElementById("Assunto").value==""){}
+            else if (document.getElementById("Duvida").value==""){}
+            else {
+                alert("Mensagem Enviada!!");
+            }
+        }
+    </script>
+</body>
+</html>

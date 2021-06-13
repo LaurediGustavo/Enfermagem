@@ -1,0 +1,31 @@
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+.lista a div {
+    background-color: rgb(233, 168, 189);
+    margin-bottom: 5px;
+    padding: 0 5px 0 5px;
+}
+
+.lista a div span {
+    float: right;
+    font-weight: bold;
+}
+
+.celula {
+    border: 1px solid palevioletred;
+    border-radius: 0 0 10px 10px;
+    border-top: none;
+    padding: 5px;
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+@media (min-width: 768px){
+    .container {
+        width: 60%;
+        margin: auto;
+    }
+}

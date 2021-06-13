@@ -13,7 +13,7 @@ body {
 }
 
 main {
-    margin-top: 80px;
+    margin-top: 10px;
 }
 
 /*---------- HEADER ---------*/
@@ -23,7 +23,6 @@ header {
     width: 100%;
     height: 70px;
     background-color: palevioletred;
-    position: fixed;
     display: flex;
     align-items: center;
     z-index: 1;
@@ -103,13 +102,11 @@ footer p {
     font-size: 1rem;
 }
 
-@media (min-width: 375px){
-    footer {
-        position: relative;
-    }
-}
-
 @media (min-width: 768px) {    
+    header {
+        position: fixed;
+    }
+    
     header .logotipo {
         margin-left: 20%;
     }
@@ -143,6 +140,10 @@ footer p {
 
     a:hover {
         color: rgb(170, 39, 83);
+    }
+
+    main {
+        margin-top: 90px;
     }
 }
 

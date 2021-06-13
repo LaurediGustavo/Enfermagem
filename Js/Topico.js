@@ -25,7 +25,7 @@ function mudarPorTamanho(n) {
     if (screen.width < 768){
         var id = "lista" + n;
 
-        if (document.querySelector('.container').clientHeight > screen.height - 50){
+        if (document.querySelector('.container').clientHeight > screen.height - 100){
             document.getElementById('footer').style.position = 'relative';
         }
         else {

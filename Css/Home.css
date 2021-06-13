@@ -55,7 +55,7 @@ main div div img {
 }
 
 .text {
-    font-size: 1rem;
+    font-size: 0.8rem;
     padding: 8px;
     width: 100%;
     color: rgb(214, 46, 46);
@@ -113,5 +113,9 @@ main div div img {
     
     .title hr {
         height: 7px;
+    }
+
+    .text {
+        font-size: 1rem;
     }
 }

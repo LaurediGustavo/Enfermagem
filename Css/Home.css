@@ -61,8 +61,17 @@ main div div img {
     color: rgb(214, 46, 46);
     text-align: justify;
     line-height: 1.5;
-    height: 240px;
+    height: 150px;
     overflow-y: auto;
+}
+
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+    width: 6px;
+    background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+    background: #bb7d7d;
 }
 
 .prev, .next {
@@ -89,17 +98,6 @@ main div div img {
 
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
-}
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
 }
 
 .dot:hover {
@@ -148,10 +146,6 @@ main div div img {
     .text {
         width: 40%;
         height: 300px;
-    }
-
-    .dot {
-        display: none;
     }
 
     .prev, .next {

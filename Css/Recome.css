@@ -1,70 +1,67 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .livro {
-    width: 90%;
+    width: 280px;
     margin: auto;
     font-size: 1rem;
+    background-color:rgb(245, 169, 194);
+    border-radius: 30px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
 }
 
 .livro h3 {
     font-weight: normal;
-    color: rgb(209, 36, 94);
+    color: rgb(163, 10, 61);
     margin-bottom: 5px;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .livro h4 {
     font-weight: normal;
-    color: rgb(224, 98, 140);
+    color: rgb(190, 41, 91);
     margin-bottom: 5px;
     font-size: 0.9rem;
 }
 
 .imagem {
-    width: 50%;
-    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 70%;
+    margin: auto;
 }
 
 .imagem img {
     width: 100%;
     height: auto;
-    margin: auto;
 }
 
-.info {
-    width: 49%;
-    float: right;
-    text-align: center;
-}
-
-.textoContainer {
-    width: 100%;
-    height: 70px;
-    margin-top: 10px;
-    overflow-y: auto;
-    margin-bottom: 15px;
-}
-
-.texto {
-    text-align: justify;
-    float: left;
-}
-
-.prev, .next {
-    cursor: pointer;
-    width: auto;
-    padding: 10px;
-    color: white;
+.info p {
+    font-size: 1.1rem;
+    color: rgb(92, 8, 8);
     font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    background-color: black;
-    opacity: 0.5;
 }
 
-.prev {
-    float: left;
+.info a {
+    font-size: 1.1rem;
+    color: rgb(165, 41, 41);
 }
 
-.next {
-    float: right;
+@media (min-width: 768px){
+    main {
+        width: 700px;
+        margin: auto;
+        margin-top: 100px;
+    }
+}
+
+@media (min-width: 1024px){
+    main {
+        width: 1000px;
+    }
 }

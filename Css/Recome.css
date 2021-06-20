@@ -37,8 +37,8 @@ main {
 }
 
 .imagem img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 260px;
 }
 
 .info p {

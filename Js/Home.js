@@ -21,3 +21,8 @@ function showSlides(n) {
 
     slides[slideIndex-1].style.display = "block";  
 }
+
+if (screen.height < 550){
+    var p = document.querySelectorAll(".text");
+    alert(p[0].value);
+}

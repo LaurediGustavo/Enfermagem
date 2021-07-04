@@ -4,13 +4,21 @@
 
 .title h1 {
     font-size: 1.2rem;
+    color: rgb(214, 46, 46);
 }
 
 .title hr {
     margin: 0 0 10px 0;
     height: 5px;
     width: 20%;
+}
+
+.barraWhite {
     background-color: palevioletred;
+}
+
+.barraBlack {
+    background-color: black;
 }
 
 .slideshow-container {

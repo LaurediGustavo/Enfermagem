@@ -1,3 +1,35 @@
+//Pegar Valor na URL
+function getValorUrl(valor) {
+    var params = window.location.search.substr(1).split('&');
+
+    for (var i = 0; i < params.length; i++) {
+        var p = params[i].split('=');
+        if (p[0] == valor) {
+            return decodeURIComponent(p[1]);
+        }
+    }
+    return false;
+}
+
+if (getValorUrl("dark")) {
+    mudarCorBlack();
+}
+else {
+    mudarCorWhite();
+}
+
+function mudarCorBlack() {
+    const barra = document.querySelector('#barra');
+    barra.setAttribute('class', 'barraBlack');
+}
+
+function mudarCorWhite() {
+    const barra = document.querySelector('#barra');
+    barra.setAttribute('class', 'barraWhite');
+}
+
+
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -24,5 +56,5 @@ function showSlides(n) {
 
 if (screen.height < 550){
     var p = document.querySelectorAll(".text");
-    alert(p[0].value);
+    //alert(p[0].value);
 }

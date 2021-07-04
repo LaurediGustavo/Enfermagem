@@ -8,8 +8,12 @@ html {
     padding: 0;
 }
 
-body {
+.bodyWhite {
     background-color: rgb(241, 227, 232);
+}
+
+.bodyBlack {
+    background-color: rgb(32,32,32);
 }
 
 main {
@@ -22,10 +26,17 @@ header {
     top: 0;
     width: 100%;
     height: 70px;
-    background-color: palevioletred;
     display: flex;
     align-items: center;
     z-index: 1;
+}
+
+.headerWhite {
+    background-color: palevioletred;
+}
+
+.headerBlack {
+    background-color: rgb(16,16,16);
 }
 
 header .logotipo {
@@ -43,9 +54,16 @@ header .nav {
 }
 
 header .nav .drop-Menu button {
-    background-color: palevioletred;
     font-size: 1.4rem;
     border: none;
+}
+
+.buttonWhite {
+    background-color: palevioletred;
+}
+
+.buttonBlack {
+    background-color: rgb(16,16,16);
 }
 
 header .nav .drop-Menu .drop-Menu-Show ul {
@@ -64,6 +82,18 @@ a {
     line-height: 2rem;
 }
 
+.input {
+    display: inline-flex;
+    color: rgb(100, 30, 30);
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+.input input {
+    margin-top: 8px;
+    margin-right: 5px;
+}
+
 .drop-Menu {
     position: relative;
     display: inline-block;
@@ -72,12 +102,19 @@ a {
 .drop-Menu-Show {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
     right: 0px;
+}
+
+.drop-Menu-Show-white {
+    background-color: #f9f9f9;
+}
+
+.drop-Menu-Show-black {
+    background-color: rgb(34, 34, 34);
 }
 
 .drop-Menu:hover .drop-Menu-Show {
@@ -86,12 +123,19 @@ a {
 
 footer {
     margin-top: 10px;
-    background-color: palevioletred;
     height: 50px;
     width: 100%;
     align-items: center;
     position: absolute;
     bottom: 0;
+}
+
+.footerWhite {
+    background-color: palevioletred;
+}
+
+.footerBlack {
+    background-color: rgb(16,16,16);
 }
 
 footer p {
@@ -102,7 +146,7 @@ footer p {
     font-size: 1rem;
 }
 
-@media (min-width: 768px) {    
+@media (min-width: 940px) {    
     header {
         position: fixed;
     }
@@ -122,8 +166,15 @@ footer p {
     .drop-Menu-Show {
         display: block;
         position: relative;
-        background-color: palevioletred;
         box-shadow: none;
+    }
+
+    .drop-Menu-Show-white {
+        background-color: palevioletred;
+    }
+
+    .drop-Menu-Show-black {
+        background-color: rgb(16,16,16);
     }
 
     header .nav .drop-Menu .drop-Menu-Show ul {

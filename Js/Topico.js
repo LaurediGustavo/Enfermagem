@@ -41,3 +41,48 @@ function mudarPorTamanho(n) {
         }
     }
 }
+
+
+//Pegar Valor na URL
+function getValorUrl(valor) {
+    var params = window.location.search.substr(1).split('&');
+
+    for (var i = 0; i < params.length; i++) {
+        var p = params[i].split('=');
+        if (p[0] == valor) {
+            return decodeURIComponent(p[1]);
+        }
+    }
+    return false;
+}
+
+if (getValorUrl("dark")) {
+    mudarCorBlack();
+}
+else {
+    mudarCorWhite();
+}
+
+function mudarCorBlack() {
+    const titulo = document.querySelectorAll('.titulo');
+    const celula = document.querySelectorAll('.celula');
+
+    for (var item of titulo){
+        item.setAttribute('class', 'titulo corDivBlack');
+    }
+    for (var item of celula){
+        item.setAttribute('class', 'celula celulaBlack');
+    }
+}
+
+function mudarCorWhite() {
+    const titulo = document.querySelectorAll('.titulo');
+    const celula = document.querySelectorAll('.celula');
+
+    for (var item of titulo){
+        item.setAttribute('class', 'titulo corDivWhite');
+    }
+    for (var item of celula){
+        item.setAttribute('class', 'celula celulaWhite');
+    }
+}

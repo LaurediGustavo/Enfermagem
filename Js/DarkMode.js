@@ -4,10 +4,21 @@ const dark = document.querySelectorAll('#Dark li a');
 check.addEventListener('click', definirDarkMode);
 
 function definirDarkMode() {
+    const body = document.querySelector('#body');
+    const btn  = document.querySelector('#btn');
+    const header = document.querySelector('#header');
+    const drop = document.querySelector('#drop');
+    const footer = document.querySelector('#footer');
+    const img = document.querySelector('#img');
+    
     if (check.checked) {
         for (var item of dark){
             var url = item.getAttribute('href');
             item.setAttribute('href', url + "?dark=1")
+        }
+
+        if (!getValorUrl('dark')){
+            window.location.href = window.location.href + "?dark=1";
         }
 
         MudaCorDark();
@@ -19,14 +30,12 @@ function definirDarkMode() {
             item.setAttribute('href', url);
         }
 
+        if (getValorUrl('dark')){
+            window.location.href = window.location.href.replace("?dark=1", "");
+        }
+
         MudaCorWhite();
     }
-
-    const body = document.querySelector('#body');
-    const btn  = document.querySelector('#btn');
-    const header = document.querySelector('#header');
-    const drop = document.querySelector('#drop');
-    const footer = document.querySelector('#footer');
 }
 
 //Pegar Valor na URL
@@ -56,6 +65,7 @@ function MudaCorDark() {
     btn.setAttribute('class', 'buttonBlack');
     header.setAttribute('class', 'headerBlack');
     drop.setAttribute('class', 'drop-Menu-Show drop-Menu-Show-black');
+    img.setAttribute('src', '../Img/menu2.png');
     footer.setAttribute('class', 'footerBlack');
 }
 
@@ -64,5 +74,6 @@ function MudaCorWhite() {
     btn.setAttribute('class', 'buttonWhite');
     header.setAttribute('class', 'headerWhite');
     drop.setAttribute('class', 'drop-Menu-Show drop-Menu-Show-white');
+    img.setAttribute('src', '../Img/menu.png');
     footer.setAttribute('class', 'footerWhite');
 }
